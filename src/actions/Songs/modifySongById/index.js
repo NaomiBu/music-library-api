@@ -1,9 +1,11 @@
 const updateSongById = require("./queries/UpdateSongById");
 
-const modifySongById = async ({songId, name}) => {
+const modifySongById = async ({songID, name, artist_id, album_id}) => {
     const song = await updateSongById ({
-songId,
-name
+songID,
+name,
+album_id,
+artist_id
     });
 
     return {song}; 

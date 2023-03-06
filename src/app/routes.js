@@ -62,7 +62,7 @@ router.delete("/album/:albumID", deleteAlbumById);
 
 router.get("/album/:albumID", getAlbumById );
 
-router.patch("/album/:albumID", patchAlbumById);
+router.patch("/album/:albumId", patchAlbumById);
 
 router.get("/albums", getAllAlbums);
 

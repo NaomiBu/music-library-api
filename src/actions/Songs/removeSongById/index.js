@@ -1,7 +1,7 @@
 const deleteSong = require("./queries/removeSong");
 
 const removeSongById = async ({songID}) => {
-  const song = await deleteAlbum({songID});
+  const song = await deleteSong({songID});
   return { song };
 };
 

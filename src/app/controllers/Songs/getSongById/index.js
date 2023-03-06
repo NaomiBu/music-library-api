@@ -5,7 +5,7 @@ const getSongById = async (req, res) => {
 const {songID} = req.params; 
 
     try {
-        const {song} = await fetchArtistById ({songID});
+        const {song} = await fetchSongById ({songID});
         res.status(201).send({
             song
         })

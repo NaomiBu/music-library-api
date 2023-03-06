@@ -1,7 +1,7 @@
-const selectSongtById = require("./queries/selectSongById");
+const selectSongById = require("./queries/selectSongById");
 
  const fetchSongById = async ({songID}) => {
-    const song = await selectArtistById({songID}) ;
+    const song = await selectSongById({songID}) ;
     return {song}
     };
 

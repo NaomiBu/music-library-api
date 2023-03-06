@@ -3,13 +3,13 @@ const handleAPIError = require("~root/utils/handleAPIError");
   
   
 const postSong = async (req, res) => {
-    const { name} = req.body;
+    const { name, album_id, artist_id} = req.body;
 
     try {
-        const { artistId } = await createSong({ name });
+        const { songId } = await createSong({ name, album_id, artist_id });
 
         res.status(201).send({
-            artistId
+            songId
         });
     } catch (err) {
         handleAPIError(res, err);
