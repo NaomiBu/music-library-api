@@ -26,6 +26,8 @@ const deleteSongById = require("./controllers/Songs/deleteSongById");
 const patchSongById = require("./controllers/Songs/patchSongById" );
 const getSongById = require("./controllers/Songs/getSongById");
 const getAllSongs = require("./controllers/Songs/getAllSongs");
+const getSongByAlbumId = require("./controllers/Songs/getSongByAlbumId");
+const getSongByArtistId = require("./controllers/Songs/getSongByArtistId");
 
 const router = express.Router();
 
@@ -77,5 +79,9 @@ router.get("/song/:songID", getSongById );
 router.patch("/song/:songID", patchSongById);
 
 router.get("/songs", getAllSongs);
+
+router.get("/songsInAlbum/:albumID", getSongByAlbumId);
+
+router.get("/songsByArtist/:artistID", getSongByArtistId);
 
 module.exports = router;
